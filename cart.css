@@ -14,6 +14,7 @@
 body {
   background: url("images/back-4.jpg") no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   font-family: var(--cairo-font);
   margin: 0;
   padding: 2rem 0;

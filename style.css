@@ -203,8 +203,19 @@ body {
     max-width: 50% !important;
   }
 }
-
-.found{
+@media screen and (max-width: 600px) {
+  .products .card-product {
+    width: 200px;
+  }
+  #all_products {
+    padding: 0 18px;
+  }
+  .card {
+    flex-grow: 1;
+    margin: 20px 3px;
+  }
+}
+.found {
   background: green;
   color: white;
   padding: 2px 5px;
@@ -212,9 +223,10 @@ body {
   animation: found 1s linear 5 alternate-reverse;
 }
 @keyframes found {
-  from{
+  from {
     background: var(--danger-color);
-  }to{
+  }
+  to {
     background: var(--bungee-font);
   }
 }

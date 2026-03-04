@@ -90,7 +90,7 @@ function trendingProducts(counter = count) {
   let card_product_trending = "";
   for (let i = 0; i < counter; i++) {
     card_product_trending += `
-                        <div class="card-product col-5 col-md-4 col-lg-4">
+                        <div class="card-product col-6 col-md-4 col-lg-4">
                     <div class="image-frame shadow d-flex align-items-center justify-content-center py-3 position-relative">
                         <img src="${data[i].images[0]}" onerror = "this.src = './images/error-product-img.jpg';" alt = "${data[i].images[0]}">
                         <button class ="btn btn-success " onclick = "theCart(${i})" title ="add to cart"><i class="fa-solid fa-cart-arrow-down"></i></button>
@@ -113,7 +113,7 @@ function all_products() {
 
   for (let i = 0; i < data.length; i++) {
     card += `
-              <div class="card-product shadow" >
+              <div class="card-product shadow card" >
                 <div class="image-frame">
                   <img src="${data[i].images[0]}" alt="${data[i].images[0]}" onerror = "this.src= './images/error-product-img.jpg';">
                 </div>
