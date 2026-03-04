@@ -1,0 +1,131 @@
+:root {
+  --light-color: #fff;
+  --dark-color: #111;
+  --danger-color: rgb(223, 22, 85);
+  --yellow-cer: yellow;
+  --note-color: gray;
+  --cairo-font: "Cairo", sans-serif;
+  --bungee-font: "Bungee", sans-serif;
+}
+::selection {
+  background: var(--danger-color);
+  color: var(--light-color);
+}
+body {
+  background: url("images/back-4.jpg") no-repeat;
+  background-size: cover;
+  font-family: var(--cairo-font);
+  margin: 0;
+  padding: 2rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-title {
+  font-family: var(--bungee-font);
+  color: var(--dark-color);
+  letter-spacing: 1px;
+}
+
+.cart-item {
+  background: var(--light-color);
+  border: 1px solid var(--note-color);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.cart-item:hover {
+  border-color: var(--yellow-cer);
+}
+
+.item-name {
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.item-price {
+  color: var(--note-color);
+}
+
+input[type="number"] {
+  width: 70px;
+  padding: 5px;
+  border: 1px solid var(--note-color);
+  border-radius: 6px;
+  text-align: center;
+  background-color: white;
+}
+
+/* تنسيق حقل العدد عند التركيز */
+input[type="number"]:focus {
+  outline: 2px solid var(--yellow-cer);
+  border-color: transparent;
+}
+
+.remove-btn {
+  background: var(--danger-color);
+  color: var(--light-color);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.remove-btn:hover {
+  opacity: 0.8;
+  transform: scale(0.97);
+}
+
+.cart-summary {
+  background: var(--light-color);
+  color: var(--dark-color);
+  border-radius: 12px;
+}
+
+.checkout-btn {
+  background: var(--danger-color);
+  color: var(--light-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.checkout-btn:hover {
+  transform: scale(1.05);
+  background-color: var(--dark-color);
+}
+
+.badge-yellow {
+  background-color: var(--danger-color);
+  color: var(--dark-color);
+  padding: 5px 12px;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.total-label {
+  font-size: 1.3rem;
+  border-bottom: 1px dashed var(--note-color);
+  padding-bottom: 8px;
+}
+.text-danger {
+  color: var(--danger-color) !important;
+}
+
+footer {
+  color: var(--note-color);
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+}

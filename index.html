@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./images/logo.jpeg">
+    <link rel="stylesheet" href="style.css" />
+    <title>Super Market</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light p-3 position-lg-fixed w-100"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> ZOZ Market</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >الرئيسية</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#trending">الأكثر رواجًا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#allProducts">منتجات عضوية</a>
+            </li>
+            <li class="nav-item">
+              <a id="openCart" class="nav-link" href="./cart.html"> العربة </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">تواصل معنا</a>
+            </li>
+          </ul>
+          <div class="d-flex search-box">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              id="search_input"
+            />
+            <button class="btn" type="submit" id="btn_search">Search</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- /* start working in hero section */ -->
+      <section class="hero-sec d-flex align-items-center">
+        <div class="container">
+          <div
+            class="hero d-lg-flex justify-content-between align-items-center"
+          >
+            <!-- add content for hero section -->
+            <div class="content mb-4 mb-lg-0">
+              <h1>
+                <p><span>nature</span> has always</p>
+                <p>cared for <span>us!</span></p>
+              </h1>
+              <button class="btn btn-danger mt-4 py-2">More Tips</button>
+            </div>
+            <!-- add image or timer of saling -->
+
+            <div class="sale">
+              <div class="title">
+                <h1>عروضنا اليوم خصم 50% مع منتجانتا</h1>
+                <p class="my-3 fs-4">مدة انتهاء العرض بعد مرور !</p>
+                <div
+                  class="time d-flex align-items-center justify-content-center gap-3"
+                >
+                  <div class="d-flex flex-column gap-2 align-items-center">
+                    <h3>ايام</h3>
+                    <h3 id="days_div">00</h3>
+                  </div>
+
+                  <div class="d-flex flex-column gap-2 align-items-center">
+                    <h3>ساعات</h3>
+                    <h3 id="hours_div">00</h3>
+                  </div>
+                  <div class="d-flex flex-column gap-2 align-items-center">
+                    <h3>دقأق</h3>
+                    <h3 id="minutes_div">00</h3>
+                  </div>
+                  <div class="d-flex flex-column gap-2 align-items-center">
+                    <h3>ثواني</h3>
+                    <h3 id="seconds_div">00</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- start working in trending products section  -->
+      <section class="trending-sec w-100" id="trending">
+        <div class="w-100">
+          <div>
+            <div class="title text-center">
+              <h1 class="fw-bold text-danger">ألمنتجات ألاكثر شهرة</h1>
+            </div>
+            <div
+              class="products row mx-0 justify-content-center align-items-center gap-1 w-100"
+              id="trending"
+            ></div>
+
+            <div class="btns container text-center mt-4">
+              <button class="btn btn-danger fs-3 shadow btn_Trending">
+                See More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- all products -->
+      <section class="all-products w-100" id="allProducts">
+        <div class="w-100">
+          <div>
+            <div class="title text-center">
+              <h1 class="fw-bold text-danger">ألمنتجات ألاكثر شهرة</h1>
+            </div>
+            <div
+              class="products mx-0 d-flex flex-wrap justify-content-center align-content-center gap-3 w-100"
+              id="all_products"
+            ></div>
+
+            <div class="btns container text-center mt-4">
+              <button class="btn btn-danger px-2">See More Products</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="text-white pt-5 pb-4 mt-5"
+      style="
+        background-color: var(--dark-color);
+        border-top: 3px solid var(--danger-color);
+      "
+      id="contact"
+    >
+      <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+          <!-- Name and Description -->
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+            <h5
+              class="text-uppercase mb-4 font-weight-bold"
+              style="color: var(--danger-color)"
+            >
+              ZOZ UI Template
+            </h5>
+            <p style="color: var(--note-color)">
+              نقدم حلول تصميم عصرية وواجهات مستخدم تدمج بين الجمالية والأداء
+              العالي.
+            </p>
+          </div>
+
+          <!-- Useful Links -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6
+              class="text-uppercase mb-4 font-weight-bold"
+              style="color: var(--danger-color)"
+            >
+              الروابط
+            </h6>
+            <p>
+              <a href="#" class="text-white text-decoration-none hover-link"
+                >الرئيسية</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white text-decoration-none hover-link"
+                >أعمالنا</a
+              >
+            </p>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6
+              class="text-uppercase mb-4 font-weight-bold"
+              style="color: var(--danger-color)"
+            >
+              تواصل معنا
+            </h6>
+            <div class="d-flex justify-content-center justify-content-md-start">
+              <a
+                href="https://www.facebook.com/ZozStacks/?locale=ar_AR"
+                class="btn btn-outline-light btn-sm me-2 social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="btn btn-outline-light btn-sm me-2 social-icon"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="btn btn-outline-light btn-sm me-2 social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="btn btn-outline-light btn-sm social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="mb-4" style="background-color: var(--note-color)" />
+
+        <!-- Copyright -->
+        <div class="row align-items-center">
+          <div class="col-md-12 text-center">
+            <p class="mb-0" style="color: var(--light-color)">
+              © <span id="printYear">2026</span> جميع الحقوق محفوظة لـ
+              <strong style="color: var(--danger-color)"
+                >ZOZ UI Template</strong
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- js librarys -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- js main file -->
+    <script src="main.js"></script>
+  </body>
+</html>
